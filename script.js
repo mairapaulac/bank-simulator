@@ -59,12 +59,14 @@ function saque() {
 
     saldoAtual.innerHTML = novoSaldo.toFixed(2);
 
-    if (isNaN(valorSaque) || valorSaque <= 0) return;
+    if (isNaN(valorSaque) || valorSaque <= 0) {
+        alert("Digite um valor válido para o saque!")
+        return;
+    }
 
     if (valorSaque > saldo)   {
-        alert("Saldo insuficiente para o saque!");
-        saldoAtual.style.color = "red";
-        rs.style.color = "red";
+        alert("Saldo insuficiente para o saque! Peça um empréstimo, pobre");
+        return;
     }
 
     adicionarTransacao(-valorSaque);

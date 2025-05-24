@@ -139,3 +139,40 @@ ul.transactions li {
 .debit {
   color: #f44336;
 }
+
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+    align-items: flex-start;
+  }
+
+  .bank-app {
+    margin-top: 2rem;
+    width: 100%;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .balance {
+    font-size: 1.7rem;
+  }
+
+  input[type="number"],
+  .btn {
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+
+  .transaction-history h2 {
+    font-size: 1.1rem;
+  }
+
+  ul.transactions li {
+    font-size: 0.9rem;
+  }
+}
