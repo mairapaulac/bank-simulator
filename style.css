@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to right, #e3f2fd, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.bank-app {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px;
+  transition: all 0.3s ease;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1976d2;
+  font-size: 1.8rem;
+}
+
+.balance-box {
+  background: #f0f4f8;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.balance-box p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.balance {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.2rem;
+}
+
+input[type="number"] {
+  padding: 0.7rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: 0.2s;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: #64b5f6;
+  box-shadow: 0 0 5px rgba(100, 181, 246, 0.5);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.btn {
+  flex: 1;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.deposit {
+  background: #4caf50;
+  color: white;
+}
+
+.deposit:hover {
+  background: #388e3c;
+}
+
+.withdraw {
+  background: #f44336;
+  color: white;
+}
+
+.withdraw:hover {
+  background: #c62828;
+}
+
+.transaction-history {
+  margin-top: 2rem;
+}
+
+.transaction-history h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.3rem;
+}
+
+ul.transactions {
+  list-style: none;
+  max-height: 180px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+ul.transactions li {
+  padding: 0.6rem;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.credit {
+  color: #4caf50;
+}
+
+.debit {
+  color: #f44336;
+}

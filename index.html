@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador de Banco</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bank-app">
+    <h1>🏦 Simulador de Banco</h1>
+    
+    <div class="balance-box">
+      <p class="saldo-atual">Saldo atual:</p>
+      <div class="balance"><span id="currency">R$</span> <span id="balance">0.00</span></div>
+    </div>
+
+    <div class="form-group">
+      <input type="number" id="amount" placeholder="Digite o valor (R$)">
+    </div>
+
+    <div class="form-group buttons">
+      <button class="btn deposit" id="btn-deposit" onclick="deposito()">Depositar</button>
+      <button class="btn withdraw" id="btn-withdraw" onclick="saque()">Sacar</button>
+    </div>
+
+    <div class="transaction-history">
+      <h2>Histórico de Transações</h2>
+      <ul class="transactions" id="transactions-list">
+        <!-- Transações aparecem aqui -->
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
