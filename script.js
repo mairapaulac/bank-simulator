@@ -27,7 +27,6 @@ function adicionarTransacao(valor) {
 
   lista.innerHTML = "";
 
- 
   ultimasTransacoes.forEach(transacao => {
     const item = document.createElement("li");
     const tipo = transacao > 0 ? "Depósito" : "Saque";
@@ -47,6 +46,12 @@ function deposito() {
    var saldo = parseFloat(saldoAtual.innerHTML);
    var novoSaldo = valorDep + saldo;
 
+   
+    if (isNaN(valorDep) || valorDep<= 0) {
+        alert("Digite um valor válido para o depósito!")
+        return;
+    }
+
    saldoAtual.innerHTML = novoSaldo.toFixed(2);
 
    adicionarTransacao(valorDep);
@@ -57,8 +62,6 @@ function saque() {
     var saldo = parseFloat(saldoAtual.innerHTML);
     var novoSaldo = saldo - valorSaque;
 
-    saldoAtual.innerHTML = novoSaldo.toFixed(2);
-
     if (isNaN(valorSaque) || valorSaque <= 0) {
         alert("Digite um valor válido para o saque!")
         return;
@@ -68,6 +71,8 @@ function saque() {
         alert("Saldo insuficiente para o saque! Peça um empréstimo, pobre");
         return;
     }
+
+    saldoAtual.innerHTML = novoSaldo.toFixed(2);
 
     adicionarTransacao(-valorSaque);
 }
